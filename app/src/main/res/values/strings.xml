@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">EduDashboard</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_account">Account</string>
+    <string name="dashboard_summary_title">Ringkasan Materi Kuliah:</string>
+    <string name="summary_item_1">- Layout &amp; View (ConstraintLayout)</string>
+    <string name="summary_item_2">- ViewBinding Interaction</string>
+    <string name="summary_item_3">- Intent (Explicit &amp; Implicit)</string>
+    <string name="summary_item_4">- Fragment Lifecycle</string>
+    <string name="btn_open_docs">BUKA DOKUMENTASI</string>
+    <string name="label_name">Input Nama </string>
+    <string name="label_nim">Input NIM</string>
+    <string name="label_ipk">Target IPK (0.00 - 4.00)</string>
+    <string name="btn_save_profile">SIMPAN PROFIL</string>
+    <string name="title_detail_account">Ringkasan Akun</string>
+    <string name="success_save">Data Berhasil Disimpan!</string>
+    <string name="display_name">Nama : %1$s</string>
+    <string name="display_nim">NIM : %1$s</string>
+    <string name="display_ipk">Target IPK Semester Ini : %1$s</string>
+    <string name="error_empty_field">Field tidak boleh kosong</string>
+    <string name="error_invalid_ipk">IPK harus di antara 0.00 dan 4.00</string>
+    <string name="action_language">Ganti Bahasa</string>
+</resources>
