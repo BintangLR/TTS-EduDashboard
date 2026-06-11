@@ -1,10 +1,10 @@
 package com.example.edudashboard
 
-import android.content.Intent
 import android.os.Bundle
-import android.provider.Settings
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.os.LocaleListCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
@@ -51,13 +51,24 @@ class MainActivity : AppCompatActivity() {
         binding.toolbar.setOnMenuItemClickListener { item ->
             when (item.itemId) {
                 R.id.action_change_language -> {
-                    val intent = Intent(Settings.ACTION_LOCALE_SETTINGS)
-                    startActivity(intent)
+                    toggleLanguage()
                     true
                 }
                 else -> false
             }
         }
+    }
+
+    private fun toggleLanguage() {
+        val currentLocale = AppCompatDelegate.getApplicationLocales()[0]?.language
+        val newLocale = if (currentLocale == "en") {
+            "in" // Indonesian
+        } else {
+            "en" // English
+        }
+
+        val appLocale: LocaleListCompat = LocaleListCompat.forLanguageTags(newLocale)
+        AppCompatDelegate.setApplicationLocales(appLocale)
     }
 
     private fun loadFragment(fragment: Fragment) {
